@@ -1,0 +1,59 @@
+{
+  "title": "Booking resource",
+  "description": "Booking resource object",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "description": "Booking id",
+      "type": "integer"
+    },
+    "first_name": {
+      "description": "First name",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 255
+    },
+    "last_name": {
+      "description": "Last name",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 255
+    },
+    "dob": {
+      "description": "date of birth",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 255
+    },
+    "checkin": {
+      "description": "check in",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 255
+    },
+    "checkout": {
+      "description": "check out",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 255
+    },
+    "total_price": {
+      "description": "total price",
+      "type": "integer"
+    },
+    "deposit": {
+      "description": "deposit",
+      "type": "integer"
+    },
+    "address": {
+      "javaType" : "com.paypal.bfs.test.bookingserv.api.model.Address",
+      "description": "address",
+      "type": "object"
+    }
+  },
+  "required": [
+    "first_name",
+    "last_name"
+  ]
+}
